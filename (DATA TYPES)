@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class UserSentenceProgram {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Asking and storing user inputs with appropriate data types
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine(); // String data type
+
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt(); // int data type
+        scanner.nextLine(); // Consume the leftover newline
+
+        System.out.print("Enter your address: ");
+        String address = scanner.nextLine(); // String data type
+
+        System.out.print("Enter your weight (in kg): ");
+        double weight = scanner.nextDouble(); // double data type
+
+        System.out.print("Enter your height (in meters or cm): ");
+        double height = scanner.nextDouble(); // double data type
+
+        // Closing the scanner
+        scanner.close();
+
+        // Printing the collected data in a sentence form
+        System.out.println("\n--- Summary ---");
+        System.out.println("Hello, my name is " + name + 
+                           ", I am " + age + " years old, and I live at " + address + 
+                           ". My weight is " + weight + " kg and my height is " + height + ".");
+    }
+}
